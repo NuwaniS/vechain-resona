@@ -5,6 +5,9 @@ import { Meditate } from "./components/meditate";
 import { TransactionHistory } from "./components/txhistory";
 import { WelcomeText } from "./components/welcomeText";
 import { Paint } from "./components/paint";
+import { Write } from "./components/write";
+import { Walk } from "./components/walk";
+import { Sleep } from "./components/sleep";
 import "./App.css";
 
 const App = () => {
@@ -28,6 +31,9 @@ const App = () => {
         <WelcomeText />
         <Paint refetch={setRefetchHistory}/>
         <Meditate refetch={setRefetchHistory}/>    
+        <Write refetch={setRefetchHistory}/>  
+        <Walk refetch={setRefetchHistory}/>  
+        <Sleep refetch={setRefetchHistory}/>  
         <TransactionHistory fetch={refetchHistory}/>
       </Box>
     </Box>

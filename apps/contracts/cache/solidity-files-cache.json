@@ -36,6 +36,42 @@
       "artifacts": [
         "SaveMindAction"
       ]
+    },
+    "D:\\VeChain\\vechain-resona\\apps\\contracts\\contracts\\SaveMindAction.sol": {
+      "lastModificationDate": 1747935603210,
+      "contentHash": "f8f2d8461420015634b41516d17882ee",
+      "sourceName": "contracts/SaveMindAction.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "evmVersion": "paris",
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.8.18"
+      ],
+      "artifacts": [
+        "SaveMindAction"
+      ]
     }
   }
 }

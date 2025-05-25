@@ -83,7 +83,7 @@ export function Meditate({refetch}) {
       const contractClause = Clause.callFunction(
         Address.of(config.CONTRACT_ADDRESS),
         ABIContract.ofAbi(ACTION_CONTRACT_ABI).getFunction("saveAction"),
-        ["Meditate" ,message],
+        ["Meditating" ,message],
         VET.of(0),
         { comment: "meditation" }
       );
@@ -172,7 +172,7 @@ export function Meditate({refetch}) {
           <ModalCloseButton />
           <ModalBody>
             <Stack spacing={4}>
-              <Text fontSize="md">Mark your meditation action</Text>
+              <Text fontSize="md">Log your meditating points</Text>
               <Text fontSize="sm">Leave a lovely memory:</Text>              
               <Input
                 id="lovely-memory"
@@ -195,7 +195,7 @@ export function Meditate({refetch}) {
             >
               Save Action
             </Button>
-            <Button colorScheme="blue" onClick={onModalClose}>
+            <Button colorScheme="orange" onClick={onModalClose}>
               Close
             </Button>
           </ModalFooter>

@@ -23,7 +23,7 @@ import {
   useToast,
   useDisclosure
 } from "@chakra-ui/react";
-import paintLogo from "../assets/paint.png";
+import walkLogo from "../assets/walk.png";
 import { ACTION_CONTRACT_ABI, config } from "@repo/config-contract";
 import { THOR_URL } from "../config/constants";
 import { VetBalance } from "./vetbalance";
@@ -36,7 +36,7 @@ enum TransactionStatus {
   Reverted = "REVERTED",
 }
 
-export function Paint({refetch}) {
+export function Walk({refetch}) {
   const { account, signer } = useWallet();
   
   const toast = useToast();
@@ -64,7 +64,7 @@ export function Paint({refetch}) {
 
   if (!account) return null;
 
-  const onPaint = async () => {
+  const onWalk = async () => {
     if (!message.trim()) {
       toast({
         title: "Missing Information",
@@ -83,9 +83,9 @@ export function Paint({refetch}) {
       const contractClause = Clause.callFunction(
         Address.of(config.CONTRACT_ADDRESS),
         ABIContract.ofAbi(ACTION_CONTRACT_ABI).getFunction("saveAction"),
-        ["Painting",message],
+        ["Walking",message],
         VET.of(0),
-        { comment: `Paint action saved!` }
+        { comment: `Walking action saved!` }
       );
 
       const tx = () =>
@@ -98,7 +98,7 @@ export function Paint({refetch}) {
 
                 },
             ],
-          comment: `Paint action saved!`,
+          comment: `Walking action saved!`,
         });
 
       
@@ -147,7 +147,7 @@ export function Paint({refetch}) {
     }
   };
 
-  const handlePaint = () => {
+  const handleWalk = () => {
     setTxId(null);
     setTxStatus(TransactionStatus.NotSent);    
     setMessage("");
@@ -157,22 +157,22 @@ export function Paint({refetch}) {
   return (
     <div style={{ position: "relative", top: "30px", height: '150px' }}>
       <Button
-        onClick={handlePaint}
+        onClick={handleWalk}
         variant="unstyled"
         _hover={{ transform: "scale(1.05)" }}
         transition="transform 0.2s"
       >
-        <img src={paintLogo} className="paintClass" alt="Paint logo" style={{ width: '100px', height: 'auto' }}/>
+        <img src={walkLogo} className="walkClass" alt="Walk logo" style={{ width: '100px', height: 'auto' }}/>
       </Button>
 
       <Modal isOpen={isModalOpen} onClose={onModalClose}>
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Painting</ModalHeader>
+          <ModalHeader>Walking Outdoors</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
             <Stack spacing={4}>
-              <Text fontSize="md">Log your painting points</Text>
+              <Text fontSize="md">Log your walking points</Text>
               <Text fontSize="sm">Leave a lovely memory:</Text>              
               <Input
                 id="lovely-memory"
@@ -189,7 +189,7 @@ export function Paint({refetch}) {
             <Button
               colorScheme="green"
               mr={3}
-              onClick={onPaint}
+              onClick={onWalk}
               isLoading={isLoading}
               loadingText="Saving..."
             >
@@ -206,7 +206,7 @@ export function Paint({refetch}) {
         <DrawerOverlay />
         <DrawerContent>
           <DrawerCloseButton />
-          <DrawerHeader>Paint Status</DrawerHeader>
+          <DrawerHeader>Walk Status</DrawerHeader>
           <DrawerBody>
             {txId && <Text>Transaction ID: {txId}</Text>}
             {txStatus === TransactionStatus.Pending && (
