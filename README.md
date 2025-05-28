@@ -5,7 +5,7 @@ contracts: apps/contracts
 
 ## Overview
 
-The users can log their mental wellness activities using the Resona Dapp. They are rewarded with tokens for each logged action.
+The users can log their mental wellness activities using the Resona DApp. They are rewarded with tokens for each logged action.
 
 ## Table of Contents
 1. [Prerequisites](#prerequisites)
@@ -33,8 +33,8 @@ yarn
 ```
 
 ## How Resona Works
-- Resona is a Dapp which helps users to keep track of their mental wellness activities and get rewarded.
-- The users can log their mental wellness activities using the Resona Dapp.
+- Resona is a DApp which helps users to keep track of their mental wellness activities and get rewarded.
+- The users can log their mental wellness activities using the Resona DApp.
 - The owner should fund the contract.
 - Those funds will be used to reward the users with 1 VET for each action logged.
 
@@ -60,7 +60,7 @@ yarn dev
 ```
 
 ## Future Enhancements
-1. Currently the following list of activities are supported in the Dapp. The list can be grown within different categories with varying rewards as well.
+1. Currently the following list of activities are supported in the DApp. The list can be grown within different categories with varying rewards as well.
 	- Painting
 	- Meditating
 	- Journaling
