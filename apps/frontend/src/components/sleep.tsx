@@ -24,6 +24,7 @@ import {
   useDisclosure
 } from "@chakra-ui/react";
 import sleepLogo from "../assets/sleep.png";
+import nightLogo from "../assets/night.png";
 import { ACTION_CONTRACT_ABI, config } from "@repo/config-contract";
 import { THOR_URL } from "../config/constants";
 import { VetBalance } from "./vetbalance";
@@ -161,8 +162,10 @@ export function Sleep({refetch}) {
         variant="unstyled"
         _hover={{ transform: "scale(1.05)" }}
         transition="transform 0.2s"
+        style={{ display: "flex", alignItems: "center", gap: "8px" }}
       >
-        <img src={sleepLogo} className="sleepClass" alt="Sleep logo" style={{ width: '100px', height: 'auto' }}/>
+        <img src={nightLogo} className="nightClass" alt="Night logo" style={{ width: '100px', height: 'auto' }}/>
+        <img src={sleepLogo} className="sleepClass" alt="Sleep logo" style={{ width: '100px', height: 'auto' }}/> 
       </Button>
 
       <Modal isOpen={isModalOpen} onClose={onModalClose}>

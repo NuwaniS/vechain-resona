@@ -24,6 +24,7 @@ import {
   useDisclosure
 } from "@chakra-ui/react";
 import walkLogo from "../assets/walk.png";
+import outdoorLogo from "../assets/outdoor.png";
 import { ACTION_CONTRACT_ABI, config } from "@repo/config-contract";
 import { THOR_URL } from "../config/constants";
 import { VetBalance } from "./vetbalance";
@@ -161,8 +162,10 @@ export function Walk({refetch}) {
         variant="unstyled"
         _hover={{ transform: "scale(1.05)" }}
         transition="transform 0.2s"
+        style={{ display: "flex", alignItems: "center", gap: "8px" }}
       >
         <img src={walkLogo} className="walkClass" alt="Walk logo" style={{ width: '100px', height: 'auto' }}/>
+        <img src={outdoorLogo} className="outdoorClass" alt="Outdoor logo" style={{ width: '100px', height: 'auto' }}/>
       </Button>
 
       <Modal isOpen={isModalOpen} onClose={onModalClose}>
