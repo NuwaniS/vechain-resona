@@ -70,4 +70,8 @@ yarn dev
 2. Currently the wallet directly receives the VET tokens for each logged action. This will be improved to store the points at the contract level and perform one time transfers to enhance the green foot print.
 
 3. Interactions with in Resona Users.
-	- Features can be added to share the earned tokens with in the DApp users as tokens of appreciation, gratitude or friendship.  
+	- Features can be added to share the earned tokens with in the DApp users as tokens of appreciation, gratitude or friendship.
+
+## Team Members
+1. Nuwani Senanayake - 0x700829681C615B3cBde4EdD800a24C1De440f9e3
+2. Ayushi Kadam - 
